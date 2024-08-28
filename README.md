@@ -1,4 +1,4 @@
-# Creating the README.txt content in a text format.
+
 
 readme_content = """
 FP-Growth Compression and Decompression App
