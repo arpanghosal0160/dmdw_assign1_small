@@ -1,4 +1,4 @@
-# src/fp_growth.py
+
 
 class FPTreeNode:
     def __init__(self, item, count=1):
@@ -14,7 +14,7 @@ class FPGrowth:
         self.header_table = {}
 
     def build_fp_tree(self, transactions):
-        # Step 1: Calculate item frequency and filter by min_support
+        #Calculate item frequency and filter by min_support
         # Build the FP-Tree
         item_count = {}
         for transaction in transactions:
