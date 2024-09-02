@@ -39,3 +39,12 @@ Installation
     ```
     pip install -r requirements.txt
     ```
+
+Requirements
+------------
+- Python 3.x
+- Required Python packages listed in `requirements.txt`
+
+Contributing
+------------
+Contributions are welcome! If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcomed.
