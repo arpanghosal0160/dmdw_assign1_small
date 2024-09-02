@@ -29,7 +29,7 @@ Installation
 ------------
 1. Clone the repository:
     ```
-    git clone https://github.com/yourusername/fp-growth-compression-app.git
+    git clone [text](https://github.com/arpanghosal0160/dmdw_assign1_small.git)
     ```
 2. Navigate to the project directory:
     ```
@@ -39,22 +39,3 @@ Installation
     ```
     pip install -r requirements.txt
     ```
-
-Usage
------
-To compress a dataset using the FP-Growth algorithm, follow these steps:
-
-1. Prepare your transaction dataset in a `.dat` file.
-2. Run the compression script:
-    ```
-    python compress.py --input data/your_dataset.dat --output output/compressed_output.dat --min_support 0.5
-    ```
-
-### Parameters:
-
-- `--input`: Path to the input `.dat` file containing the transaction data.
-- `--output`: Path where the compressed output will be saved.
-- `--min_support`: Minimum support threshold for frequent itemsets.
-
-Project Structure
------------------
