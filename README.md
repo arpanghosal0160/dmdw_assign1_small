@@ -48,3 +48,10 @@ Requirements
 Contributing
 ------------
 Contributions are welcome! If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcomed.
+
+Team Members
+------------
+- **Arpan Ghosal** (Roll: 22052712)
+- **Dhruv Kushwaha** (Roll: 22052722)
+- **Aarushi Srivastava** (Roll: 22052869)
+- **Divyam** (Roll: 22053321)
