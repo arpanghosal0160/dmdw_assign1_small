@@ -14,23 +14,24 @@ class FPGrowth:
         self.header_table = {}
 
     def build_fp_tree(self, transactions):
-       
+        #Calculate item frequency and filter by min_support
+        # Build the FP-Tree
         item_count = {}
         for transaction in transactions:
             for item in transaction:
                 item_count[item] = item_count.get(item, 0) + 1
 
-        
+        # Remove items that don't meet min_support
         items = {k: v for k, v in item_count.items() if v >= self.min_support}
 
-       
+        # Initialize Header Table
         self.header_table = {k: [v, None] for k, v in items.items()}
 
-        
+        # Create the root of the FP-Tree
         root = FPTreeNode(None)
 
         for transaction in transactions:
-            
+            # Filter and sort transactions by item frequency
             sorted_items = sorted([item for item in transaction if item in items],
                                   key=lambda i: items[i], reverse=True)
             self._insert_tree(sorted_items, root)
@@ -49,7 +50,7 @@ class FPGrowth:
             new_node.parent = node
             node.children[first_item] = new_node
 
-           
+            # Update header table
             if self.header_table[first_item][1] is None:
                 self.header_table[first_item][1] = new_node
             else:
@@ -58,11 +59,11 @@ class FPGrowth:
                     current_node = current_node.link
                 current_node.link = new_node
 
-       
+        # Recursively insert the remaining items
         self._insert_tree(items[1:], node.children[first_item])
 
     def mine_patterns(self, tree):
-        
+        # Mine patterns from the FP-Tree
         patterns = {}
         for item, node_info in sorted(self.header_table.items(), key=lambda x: x[1][0]):
             patterns[item] = node_info[0]
@@ -75,5 +76,6 @@ class FPGrowth:
         return patterns
 
     def _build_conditional_tree(self, item):
-       
+        # Build a conditional FP-Tree for a given item
+        # This is used to mine patterns
         pass
