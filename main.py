@@ -3,8 +3,12 @@ from src.compressor import Compressor
 from src.decompressor import Decompressor
 from src.utils import calculate_compression_ratio, calculate_compression_ratio_by_lines
 
+import sys
+sys.setrecursionlimit(3000)  # Increase this value if needed
+
+
 def main():
-    input_file = 'D_small.dat'
+    input_file = 'D_medium.dat'
     compressed_file = 'output/compressed.dat'
     decompressed_file = 'output/decompressed.dat'
     min_support = 2  # Example value for minimum support
